@@ -5,6 +5,7 @@ public class ProjectTest{
 
         test.setName("Project 1");
         test.setDesc("this is some project lol");
+        test.setInitialCost(50);
         test.elevatorPitch();
 
         test.setName("Project 2");

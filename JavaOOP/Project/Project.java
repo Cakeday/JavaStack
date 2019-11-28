@@ -1,6 +1,7 @@
 public class Project{
     private String name;
     private String description;
+    private double initialCost;
 
     // get and set name
     public String getName(){
@@ -18,6 +19,14 @@ public class Project{
         this.description = desc;
     }
 
+    // get and set initialCost
+    public double getInitialCost(){
+        return initialCost;
+    }
+    public void setInitialCost(double cost){
+        this.initialCost = cost;
+    }
+
     
     // cunstructors
     public Project(){
@@ -32,6 +41,6 @@ public class Project{
     }
 
     public void elevatorPitch(){
-        System.out.println(name + ": " + description); 
+        System.out.println(name + " " + "(" + initialCost + ")" + ": " + description); 
     }
 }
