@@ -9,6 +9,7 @@ public class Human {
 	int intelligence = 3;
 	int stealth = 3;
 	int health = 100;
+	static int amountOfSams = 0;
 	public int getStrength() {
 		return strength;
 	}
