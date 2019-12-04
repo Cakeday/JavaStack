@@ -13,15 +13,9 @@ public class StringsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(StringsApplication.class, args);
 	}
-	
-	@RequestMapping("/")
-	public String home(){
-		return "Hello client, how are you doing?";
-	}
-	
-	@RequestMapping("/random")
-	public String random(){
-		return "Spring boot is great!";
-	}
 
+	@RequestMapping("/another")
+	public String another(){
+		return "another page";
+	}
 }
