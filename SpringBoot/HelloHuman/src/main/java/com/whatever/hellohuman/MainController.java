@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MainController {
 	
-	@RequestMapping("/")
+	@RequestMapping("/something")
 	public String display(@RequestParam(value="firstName", required=false) String firstName, @RequestParam(value="lastName", required=false) String lastName) {
 		if (firstName != null && lastName == null) {
 			return "Hello " + firstName + "!";

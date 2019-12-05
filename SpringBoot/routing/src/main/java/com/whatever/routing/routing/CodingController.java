@@ -1,18 +1,20 @@
 package com.whatever.routing.routing;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+// import org.springframework.web.bind.annotation.RestController;
 
 /**
  * CodingController
  */
-@RestController
+@Controller
+// @RestController
 @RequestMapping("/coding")
 public class CodingController {
 
     @RequestMapping("")
     public String coding(){
-        return "Hello Coding Dojo!";
+        return "index.jsp";
     }
 
     @RequestMapping("/python")
