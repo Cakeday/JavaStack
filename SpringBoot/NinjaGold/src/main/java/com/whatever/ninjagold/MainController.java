@@ -1,6 +1,6 @@
 package com.whatever.ninjagold;
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 import java.util.Random;
 
 import javax.servlet.http.HttpSession;
