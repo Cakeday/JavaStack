@@ -46,14 +46,6 @@ public class Book {
         this.numberOfPages = pages;
     }
     
-    public Book update(String title, String desc, String lang, int pages) {
-    	this.title = title;
-        this.description = desc;
-        this.language = lang;
-        this.numberOfPages = pages;
-        return this;
-    }
-    
 
     public Long getId() {
 		return id;
