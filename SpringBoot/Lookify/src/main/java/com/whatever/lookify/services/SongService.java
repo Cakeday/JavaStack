@@ -43,7 +43,7 @@ public class SongService {
 
     public ArrayList<Song> findSongByArtist(String artist) {
         List<Song> theSongs = songRepository.findAll();
-        ArrayList<Song> newList = new ArrayList();
+        ArrayList<Song> newList = new ArrayList<Song>();
         for(Song song : theSongs){
             if(song.getArtist().contains(artist)){
                 newList.add(song);
