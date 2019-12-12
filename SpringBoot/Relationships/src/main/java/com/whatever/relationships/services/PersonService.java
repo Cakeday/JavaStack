@@ -17,11 +17,9 @@ import org.springframework.stereotype.Service;
 public class PersonService {
 
     private final PersonRepository personRepository;
-    private final LicenseRepository licenseRepository;
 // The below constructor must match the classname!!!
     public PersonService(PersonRepository personRepository, LicenseRepository licenseRepository) {
         this.personRepository = personRepository;
-        this.licenseRepository = licenseRepository;
     }
 
     // creates and updates a person

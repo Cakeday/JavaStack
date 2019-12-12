@@ -29,7 +29,6 @@ public class License {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private static String number = "000001";
     @DateTimeFormat(pattern = "MM-dd-yyyy")
     private Date expirationDate;
     private String state;
@@ -48,19 +47,12 @@ public class License {
     public License(Long id, Date expirationDate, String state, Date createdAt, Date updatedAt, Person person) {
         this.id = id;
         this.expirationDate = expirationDate;
-        this.number = numberIncrementer();
         this.state = state;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
         this.person = person;
     }
 
-    public static String numberIncrementer(){
-        int i = Integer.parseInt(number);
-        i++;
-        String str = String.format("%06d", i);
-        return str;
-    }
 
     // getters and setters removed for brevity
 
@@ -69,12 +61,6 @@ public class License {
     }
     public void setId(Long id) {
         this.id = id;
-    }
-    public String getNumber() {
-        return this.number;
-    }
-    public void setNumber(String number) {
-        this.number = number;
     }
     public Date getExpirationDate() {
         return this.expirationDate;
