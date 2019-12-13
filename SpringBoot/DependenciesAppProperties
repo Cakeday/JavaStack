@@ -13,11 +13,19 @@ spring.jpa.hibernate.ddl-auto=update
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 
-
-
 *************************************************************************************
 
 
+@PrePersist
+    protected void onCreate(){
+        this.createdAt = new Date();
+    }
+    @PreUpdate
+    protected void onUpdate(){
+        this.updatedAt = new Date();
+    }
+
+*************************************************************************************
 
 <dependency>
     <groupId>org.springframework.boot</groupId>
