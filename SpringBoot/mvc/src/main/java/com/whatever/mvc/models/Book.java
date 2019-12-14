@@ -37,6 +37,10 @@ public class Book {
     @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date updatedAt;
     
+    
+    
+    
+    
     public Book() {
     }
     public Book(String title, String desc, String lang, int pages) {
@@ -45,6 +49,10 @@ public class Book {
         this.language = lang;
         this.numberOfPages = pages;
     }
+    
+    
+    
+    
     
 
     public Long getId() {
@@ -89,6 +97,11 @@ public class Book {
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
+	
+	
+	
+	
+	
 	@PrePersist
     protected void onCreate(){
         this.createdAt = new Date();

@@ -15,7 +15,7 @@
     <form:form action="/createlicense" method="post" modelAttribute="license">
         <p>
             <form:select path="person">
-                <option selected>Pick a number!</option>
+                <option selected disabled>Pick a number!</option>
                 <c:forEach items="${allPeople}" var="person">
                     <form:option value="${person}">${person.firstName} ${person.lastName}</form:option> 
                 </c:forEach>
@@ -32,7 +32,7 @@
             <fmt:formatDate pattern="dd/MM/yyyy" var="myDate" />
             <form:input type="date" path="expirationDate" value="${myDate}"/>
         </p>
-        <input type="submit" value="Create"/>
+        <input type="submit" value="Create">
     </form:form>
     
 </body>
