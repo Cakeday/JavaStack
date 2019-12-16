@@ -5,6 +5,8 @@ spring.datasource.username=root
 spring.datasource.password=root
 spring.jpa.hibernate.ddl-auto=update
 
+MAKE SURE YOU UPDATE YOU SCHEMA AND DO NOT FORGET
+
 
 *************************************************************************************
 
@@ -72,7 +74,11 @@ spring.jpa.hibernate.ddl-auto=update
     </exclusions>
 </dependency>
 
-
+<dependency>
+    <groupId>org.mindrot</groupId>
+    <artifactId>jbcrypt</artifactId>
+    <version>0.4</version>
+</dependency>
 
 
 
