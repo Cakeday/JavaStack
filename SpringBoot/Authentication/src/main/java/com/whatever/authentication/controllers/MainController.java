@@ -5,6 +5,7 @@ import javax.validation.Valid;
 
 import com.whatever.authentication.models.User;
 import com.whatever.authentication.services.UserService;
+import com.whatever.authentication.validations.UserValidator;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,9 +22,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class MainController {
     
     private final UserService userService;
+    private final UserValidator userValidator;
     
-    public MainController(UserService userService) {
+    public MainController(UserService userService, UserValidator userValidator) {
         this.userService = userService;
+        this.userValidator = userValidator;
     }
 
     @GetMapping("/registration")
@@ -39,6 +42,7 @@ public class MainController {
     public String registerUser(@Valid @ModelAttribute("user") User user, BindingResult result, HttpSession session) {
         // if result has errors, return the registration page (don't worry about validations just now)
         // else, save the user in the database, save the user id in session, and redirect them to the /home route
+        userValidator.validate(user, result);
         if(result.hasErrors()){
             return "/registration";
         } else {
