@@ -25,7 +25,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 
 /**
  * MainController
@@ -39,7 +38,6 @@ public class MainController {
     private final DojoService dojoService;
     private final ProductService productService;
     private final CategoryService categoryService;
-    private final CategoryProductService categoryProductService;
 
     public MainController(PersonService personService, LicenseService licenseService, NinjaService ninjaService, DojoService dojoService, ProductService productService, CategoryService categoryService, CategoryProductService categoryProductService) {
         this.personService = personService;
@@ -48,7 +46,6 @@ public class MainController {
         this.dojoService = dojoService;
         this.productService = productService;
         this.categoryService = categoryService;
-        this.categoryProductService = categoryProductService;
     }
 
 
@@ -186,7 +183,7 @@ public class MainController {
         if(result.hasErrors()){
             return "addcategory.jsp";
         } else {
-            Product oldProduct = productService.findProduct(id);
+            Product oldProduct = productService.findProduct(id);            
             for(int i = 0; i < product.getCategories().size(); i++){
                 oldProduct.getCategories().add(product.getCategories().get(i));
             }
