@@ -80,5 +80,11 @@ MAKE SURE YOU UPDATE YOU SCHEMA AND DO NOT FORGET
     <version>0.4</version>
 </dependency>
 
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+
+
 
 

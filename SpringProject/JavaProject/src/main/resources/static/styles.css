@@ -1,0 +1,63 @@
+* {
+    outline: red dotted 1px;
+    background-color: var(--color-4);
+}
+
+:root {
+    --color-1: rgb(34, 124, 157);
+    --color-2: rgb(23, 195, 178);
+    --color-3: rgb(255, 203, 119);
+    --color-4: rgb(254, 249, 239);
+    --color-5: rgb(254, 109, 115);
+
+}
+
+
+.container{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header header btc"
+    "compete compete compete compete"
+    "indivs indivs teams teams"
+    "rewards rewards settings settings"
+    ;
+    background-color: var(--color-4);
+    gap: 5px;
+}
+
+.header, h1{
+    grid-area: header;
+    background-color: var(--color-1);
+    align-self: stretch;
+    border-radius: 10px;
+}
+.btc{
+    grid-area: btc;
+    border-radius: 10px;
+}
+.compete{
+    grid-area: compete;
+    background-color: var(--color-2);
+    border-radius: 10px;
+}
+.indivs{
+    grid-area: indivs;
+    background-color: var(--color-3);
+    border-radius: 10px;
+}
+.teams{
+    grid-area: teams;
+    background-color: var(--color-5);
+    border-radius: 10px;
+}
+.rewards{
+    grid-area: rewards;
+    border-radius: 10px;
+}
+.settings{
+    grid-area: settings;
+    border-radius: 10px;
+}
